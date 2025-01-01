@@ -10,4 +10,4 @@ end_of_line = lf
 insert_final_newline = true
 charset = utf-8
 trim_trailing_whitespace = true
-call_parentheses = true
+call_parentheses = false

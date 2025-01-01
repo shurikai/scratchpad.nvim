@@ -1,15 +1,14 @@
 local M = {}
 
-
 ---Validate the options table obtained from merging defaults and user options
 local function validate_opts_table()
-  local opts = require("base.config").options
+  local opts = require("scratchpad.config").options
 
   local ok, err = pcall(function()
-    vim.validate {
-      name = { opts.name, "string" }
+    vim.validate({
+      name = { opts.name, "string" },
       --- validate other options here...
-    }
+    })
   end)
 
   if not ok then
@@ -19,11 +18,10 @@ local function validate_opts_table()
   end
 end
 
-
 ---This function is used to check the health of the plugin
 ---It's called by `:checkhealth` command
 M.check = function()
-  vim.health.start("base.nvim health check")
+  vim.health.start("scratchpad.nvim health check")
 
   validate_opts_table()
 
@@ -34,6 +32,5 @@ M.check = function()
   --  - check for LSP setup
   --  ...
 end
-
 
 return M
