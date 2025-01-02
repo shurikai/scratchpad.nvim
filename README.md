@@ -1,4 +1,4 @@
-### 󱍓 Stickynotes
+# Stickynotes
 
 ## Targeted Capabilities (Stickynote) 
 
