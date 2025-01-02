@@ -2,7 +2,7 @@ local M = {}
 
 ---Validate the options table obtained from merging defaults and user options
 local function validate_opts_table()
-  local opts = require("scratchpad.config").options
+  local opts = require("stickies.config").options
 
   local ok, err = pcall(function()
     vim.validate({
@@ -21,7 +21,7 @@ end
 ---This function is used to check the health of the plugin
 ---It's called by `:checkhealth` command
 M.check = function()
-  vim.health.start("scratchpad.nvim health check")
+  vim.health.start("stickies.nvim health check")
 
   validate_opts_table()
 

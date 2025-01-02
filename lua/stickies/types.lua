@@ -2,7 +2,7 @@
 --- This is a simple "definition file" (https://luals.github.io/wiki/definition-files/),
 --- the @meta tag at the top is its hallmark.
 
--- lua/scratchpad/config.lua -----------------------------------------------------
+-- lua/stickies/config.lua -----------------------------------------------------
 
 ---The overall configurat of a Window object. The values here are a subset of those
 ---used by the nvim_open_win function.
@@ -30,14 +30,14 @@
 ---@field filename string The filename used for the sticky note.
 ---@field body? string[] The body text of the given note, as individual lines.
 
--- lua/scratchpad/config.lua -----------------------------------------------------
+-- lua/stickies/config.lua -----------------------------------------------------
 
 ---@class stickies.UserOptions
 ---@field window stickies.WindowConfig The configuration for the sticky window.
 
 
 ---@class ScratchConfig
----@field scratchpad Window.Config
+---@field stickies Window.Config
 ---@field globalwin Window.Config
 ---@field localwin Window.Config
 ---@field notes_dir? string: Path where notes are stored.
@@ -87,9 +87,9 @@
   row = get_center_pos('height'),
   zindex = 201, -- Just above message scrollback, but below cmdline completion popup.
   border = 'rounded',
-  title = 'Scratchpad',
+  title = 'stickies',
   title_pos = 'left',
-  footer = '... scratchpad ...',
+  footer = '... stickies ...',
   footer_pos = 'right',
 
 --]]
@@ -112,10 +112,10 @@
 
 --[[
 Configuration Construction:
- - Scratchpad
+ - stickies
    - init function
    - ScratchConfig
-      - Scratchpad - SWinCfg
+      - stickies - SWinCfg
         - { width, height }
         - "float" | "split" | "vsplit"
         - border style - "none" | "single" | "double" | "rounded" | "solid" | "shadow"

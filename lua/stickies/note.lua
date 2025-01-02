@@ -1,4 +1,4 @@
-local cfg = require 'scratchpad.config'
+local cfg = require 'stickies.config'
 
 local Note = {}
 

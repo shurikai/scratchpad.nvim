@@ -1,4 +1,4 @@
-local cfg = require 'scratchpad.config'
+local cfg = require 'stickies.config'
 
 ---@class stickies.Window
 ---@field config? vim.api.keyset.win_config
@@ -21,6 +21,8 @@ function Window:new(obj)
   local object = setmetatable({}, self)
   local config = vim.deepcopy(obj or {})
   object.config = vim.tbl_deep_extend('force', object.config, config)
+
+  print("Window.config: " .. vim.inspect(self.config))
   return object
 end
 
